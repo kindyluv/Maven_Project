@@ -10,4 +10,6 @@ import java.util.List;
 public interface CustomerService {
 
     List<CustomerResponse> findAll();
+
+    void addNew(Customer customer);
 }
