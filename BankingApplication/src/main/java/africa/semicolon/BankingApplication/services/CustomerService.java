@@ -5,7 +5,7 @@ import africa.semicolon.BankingApplication.data.models.Customer;
 
 public interface CustomerService {
 
-    Account createAccount(String firstName, String lastName);
+    String createAccount(String firstName, String lastName);
 
-    Account createAccount(String firstName, String lastName, String bvn);
+    String createAccount(String firstName, String lastName, String bvn);
 }
