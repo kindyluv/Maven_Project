@@ -31,9 +31,9 @@ class AccountRepositoryImplTest {
 //        customer.setFirstName("Ama");
 //        customer.setFirstName("Lois");
         account.setCustomerId("12345");
-        account.setNumber("234543");
-        account.setType(AccountType.SAVINGS);
-        account.setBalance(new BigDecimal ("234.65"));
+        account.setAccountNumber("234543");
+        account.setAccountType(AccountType.SAVINGS);
+        account.setAccountBalance(new BigDecimal ("234.65"));
 
         assertEquals(account,imp.save(account));
     }
@@ -46,9 +46,9 @@ class AccountRepositoryImplTest {
         customer.setFirstName("Ama");
         customer.setFirstName("Lois");
         account.setCustomerId("12345");
-        account.setNumber("234543");
-        account.setType(AccountType.SAVINGS);
-        account.setBalance(new BigDecimal ("234.65"));
+        account.setAccountNumber("234543");
+        account.setAccountType(AccountType.SAVINGS);
+        account.setAccountBalance(new BigDecimal ("234.65"));
         Account acc = imp.save(account);
 
         assertEquals(account, imp.findAccountById("12345"));
@@ -61,9 +61,9 @@ class AccountRepositoryImplTest {
         customer.setFirstName("Ama");
         customer.setFirstName("Lois");
         account.setCustomerId("12345");
-        account.setNumber("234543");
-        account.setType(AccountType.SAVINGS);
-        account.setBalance(new BigDecimal ("234.65"));
+        account.setAccountNumber("234543");
+        account.setAccountType(AccountType.SAVINGS);
+        account.setAccountBalance(new BigDecimal ("234.65"));
         accountRepository.save(account);
         assertNotNull(accountRepository.findAccountById("12345"));
 
@@ -78,9 +78,9 @@ class AccountRepositoryImplTest {
         customer.setFirstName("Ama");
         customer.setFirstName("Lois");
         account.setCustomerId("12345");
-        account.setNumber("234543");
-        account.setType(AccountType.SAVINGS);
-        account.setBalance(new BigDecimal ("234.65"));
+        account.setAccountNumber("234543");
+        account.setAccountType(AccountType.SAVINGS);
+        account.setAccountBalance(new BigDecimal ("234.65"));
         accountRepository.save(account);
         assertNotNull(accountRepository.findAccountById("12345"));
 
@@ -95,9 +95,9 @@ class AccountRepositoryImplTest {
         customer.setFirstName("Ama");
         customer.setFirstName("Lois");
         account.setCustomerId("12345");
-        account.setNumber("234543");
-        account.setType(AccountType.SAVINGS);
-        account.setBalance(new BigDecimal ("234.65"));
+        account.setAccountNumber("234543");
+        account.setAccountType(AccountType.SAVINGS);
+        account.setAccountBalance(new BigDecimal ("234.65"));
         accountRepository.save(account);
         accountRepository.save(account);
         accountRepository.save(account);
@@ -112,9 +112,9 @@ class AccountRepositoryImplTest {
         customer.setFirstName("Ama");
         customer.setFirstName("Lois");
         account.setCustomerId("12345");
-        account.setNumber("234543");
-        account.setType(AccountType.SAVINGS);
-        account.setBalance(new BigDecimal ("234.65"));
+        account.setAccountNumber("234543");
+        account.setAccountType(AccountType.SAVINGS);
+        account.setAccountBalance(new BigDecimal ("234.65"));
         accountRepository.save(account);
         accountRepository.save(account);
         accountRepository.save(account);
