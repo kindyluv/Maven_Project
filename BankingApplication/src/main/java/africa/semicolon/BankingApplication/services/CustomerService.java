@@ -2,10 +2,12 @@ package africa.semicolon.BankingApplication.services;
 
 import africa.semicolon.BankingApplication.data.models.Account;
 import africa.semicolon.BankingApplication.data.models.Customer;
+import africa.semicolon.BankingApplication.dtos.response.CustomerResponse;
+
+import java.util.Collection;
+import java.util.List;
 
 public interface CustomerService {
 
-    String createAccount(String firstName, String lastName);
-
-    String createAccount(String firstName, String lastName, String bvn);
+    List<CustomerResponse> findAll();
 }
