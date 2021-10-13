@@ -11,11 +11,11 @@ public class CustomerRepositoryImpl implements CustomerRepository{
     @Override
     public Customer save(Customer customer) {
         customers.add(customer);
-        return findById(customer.getBvn());
+        return findCustomerById(customer.getBvn());
     }
 
     @Override
-    public Customer findById(String id) {
+    public Customer findCustomerById(String id) {
         for (Customer customer : customers) {
             if (customer.getBvn().equalsIgnoreCase(id)) return customer;
         }
@@ -29,7 +29,7 @@ public class CustomerRepositoryImpl implements CustomerRepository{
 
     @Override
     public void delete(String id) {
-        Customer customer = findById(id);
+        Customer customer = findCustomerById(id);
         delete(customer);
     }
 
