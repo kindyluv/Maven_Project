@@ -8,6 +8,6 @@ import java.util.List;
 @Data
 public class Bank {
     private List<Account> accounts = new ArrayList<>();
-    private final String id;
-    private String name;
+    private final String bankId;
+    private String bankName;
 }
