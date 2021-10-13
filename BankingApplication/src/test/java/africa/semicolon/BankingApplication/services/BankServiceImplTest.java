@@ -129,19 +129,19 @@ class BankServiceImplTest {
         assertEquals("0100000002", accountNumber2);
         assertEquals("0200000001", accountNumber3);
     }
-//
-//    @Test
-//    void whenAccountIsCreated_CustomerIsCreatedToo(){
-//        String name = bankService.createBank("GTCO");
-//
-//        CreateAccountRequests agba = new CreateAccountRequests();
-//        agba.setAccountType(AccountType.KIDDIES);
-//        agba.setBankId(name);
-//        agba.setFirstName("Agba");
-//        agba.setLastName("Mon_shur");
-//
-//        String agbaMonsure = bankService.createAccount(agba);
-//        CustomerService customerService = new CustomerServiceImpl();
-//        assertEquals(1, customerService.findAll().size());
-//    }
+
+    @Test
+    void whenAccountIsCreated_CustomerIsCreatedToo(){
+        String name = bankService.createBank("GTCO");
+
+        CreateAccountRequests agba = new CreateAccountRequests();
+        agba.setAccountType(AccountType.KIDDIES);
+        agba.setBankId(name);
+        agba.setFirstName("Agba");
+        agba.setLastName("Mon_shur");
+
+        String agbaMonsure = bankService.createAccount(agba);
+        CustomerService customerService = new CustomerServiceImpl();
+        assertEquals(1, customerService.findAll().size());
+    }
 }
