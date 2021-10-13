@@ -1,7 +1,6 @@
 package africa.semicolon.BankingApplication.data.repositories;
 
 import africa.semicolon.BankingApplication.data.models.Bank;
-import africa.semicolon.BankingApplication.data.models.Customer;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,7 +22,7 @@ class BankRepositoryImpTest {
     @Test
     void save() {
         Bank bank = new Bank("1234567");
-        bank.setName("Lois");
+        bank.setBankName("Lois");
         Bank banking = bankRepository.save(bank);
         assertEquals(bank, banking);
     }
@@ -31,7 +30,7 @@ class BankRepositoryImpTest {
     @Test
     void findById() {
         Bank bank = new Bank("1234567");
-        bank.setName("Lois");
+        bank.setBankName("Lois");
         bankRepository.save(bank);
 
         Bank news = bankRepository.findBankById("1234567");
@@ -41,7 +40,7 @@ class BankRepositoryImpTest {
     @Test
     void delete() {
         Bank bank = new Bank("1234567");
-        bank.setName("Lois");
+        bank.setBankName("Lois");
         bankRepository.save(bank);
         bankRepository.findBankById("1234567");
 
@@ -52,7 +51,7 @@ class BankRepositoryImpTest {
     @Test
     void deleteById() {
         Bank bank = new Bank("1234567");
-        bank.setName("Lois");
+        bank.setBankName("Lois");
         bankRepository.save(bank);
         bankRepository.findBankById("1234567");
 
@@ -63,7 +62,7 @@ class BankRepositoryImpTest {
     @Test
     void findAll() {
         Bank bank = new Bank("1234567");
-        bank.setName("Lois");
+        bank.setBankName("Lois");
         bankRepository.save(bank);
         bankRepository.save(bank);
         bankRepository.save(bank);
