@@ -50,7 +50,8 @@ class BankServiceImplTest {
 
     @Test
     void testThatBankCanCreateAccountForCustomers(){
-        String gtCoId = bankService.createBank("GTCO");
+        //given
+        bankService.createBank("GTCO");
         //when
         String accountNumber = bankService.createAccount("01","Agba", "Monusr");
         //assert
@@ -59,7 +60,8 @@ class BankServiceImplTest {
 
     @Test
     void testThatBankCanCreateTwoAccountInBank1_accNumberShouldBe02(){
-        String gtCoId = bankService.createBank("GTCO");
+        //given
+        bankService.createBank("GTCO");
         //when
         String accountNumber = bankService.createAccount("01","Agba", "Monusr");
         String accountNumber2 = bankService.createAccount("01","Ajohnne", "sleepingLogic");
@@ -70,8 +72,9 @@ class BankServiceImplTest {
 
     @Test
     void testThatBankCanCreateTwoAccountInBank1_AndBank2_accNumberShouldBe01(){
-        String gtCoId = bankService.createBank("GTCO");
-        String firstBankId = bankService.createBank("First Bank");
+        //given
+        bankService.createBank("GTCO");
+        bankService.createBank("First Bank");
         //when
         String accountNumber = bankService.createAccount("01","Agba", "Monusr");
         String accountNumber2 = bankService.createAccount("01","Ajohnne", "sleepingLogic");
