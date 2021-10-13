@@ -8,7 +8,7 @@ import static africa.semicolon.BankingApplication.data.models.AccountType.SAVING
 @Data
 public class Account {
     private String customerId = "0";
-    private String number;
-    private AccountType type = SAVINGS;
-    private BigDecimal balance = BigDecimal.ZERO;
+    private String accountNumber;
+    private AccountType accountType = SAVINGS;
+    private BigDecimal accountBalance = BigDecimal.ZERO;
 }
