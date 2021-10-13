@@ -53,4 +53,10 @@ public class BankServiceImpl implements BankService{
         return account.getAccountNumber();
     }
 
+    private String generateSuffix(String bankId) {
+        Bank bank = bankRepository.findBankById(bankId);
+        int lastNumber = bank.getAccounts().size();
+        return String.format("%08d", ++lastNumber);
+
+    }
 }
