@@ -16,12 +16,12 @@ public class CustomerServiceImpl implements CustomerService{
         List<CustomerResponse> responses = new ArrayList<>();
         List<Customer> ourRealCustomers = customerRepository.findAll();
         for (Customer customer : ourRealCustomers) {
-            CustomerResponse customerResponse = new CustomerResponse();
+            CustomerResponse customerResponse = new CustomerResponse(customer);
             customerResponse.setFirstName(customer.getFirstName());
             customerResponse.setLastName(customer.getLastName());
             customerResponse.setBvn(customer.getBvn());
             customerResponse.setNumberOfAccounts(customer.getAccounts().size());
-            responses.add(customerResponse);
+            responses.add(new CustomerResponse(customer));
         }
         return responses;
     }
