@@ -12,6 +12,10 @@ public class BankRepositoryImp implements BankRepository {
 
     @Override
     public Bank save(Bank bank) {
+        Bank foundBank = findBankById(bank.getId());
+        if (foundBank != null) {
+            delete(foundBank);
+        }
         banks.add(bank);
         return findBankById(bank.getId());
     }
