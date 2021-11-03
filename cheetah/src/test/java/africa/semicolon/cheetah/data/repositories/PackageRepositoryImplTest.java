@@ -87,24 +87,24 @@ class PackageRepositoryImplTest {
         assertEquals(0, packageRepository.findAll().size());
     }
 
-//    @Test
-//    void deleteByTrackingNumber() {
-//        Package aPackage = new Package();
-//        aPackage.setName("Sleeping Mat");
-//        aPackage.setSenderName("Jerry");
-//        aPackage.setReceiverName("Dami");
-//        aPackage.setReceiverPhone("111112222");
-//        aPackage.setDeliveryAddress("312, ");
-////        aPackage.setId(1234);
-//        aPackage.setNetWeight(32.4);
-//        aPackage.setSenderPhone(aPackage.getReceiverPhone());
-//
-//        Package savedPackage = packageRepository.save(aPackage);
-//        assertEquals(1, packageRepository.findAll().size());
-//
-//        packageRepository.delete(1);
-//        assertEquals(0, packageRepository.findAll().size());
-//    }
+    @Test
+    void deleteByTrackingNumber() {
+        Package aPackage = new Package();
+        aPackage.setName("Sleeping Mat");
+        aPackage.setSenderName("Jerry");
+        aPackage.setReceiverName("Dami");
+        aPackage.setReceiverPhone("111112222");
+        aPackage.setDeliveryAddress("312, ");
+//        aPackage.setId(1234);
+        aPackage.setNetWeight(32.4);
+        aPackage.setSenderPhone(aPackage.getReceiverPhone());
+
+        Package savedPackage = packageRepository.save(aPackage);
+        assertEquals(1, packageRepository.findAll().size());
+
+        packageRepository.delete(1);
+        assertEquals(0, packageRepository.findAll().size());
+    }
 
 //    @Test
 //    void findPackageTrackingNumbered() {
