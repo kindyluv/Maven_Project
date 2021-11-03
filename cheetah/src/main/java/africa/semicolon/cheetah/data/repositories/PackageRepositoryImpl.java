@@ -8,7 +8,8 @@ import java.util.Map;
 import java.util.Optional;
 
 public class PackageRepositoryImpl implements PackageRepository {
-    Map<Integer, Package> database = new HashMap<>();
+    private final Map<Integer, Package> database = new HashMap<>();
+
     @Override
     public Package save(Package aPackage) {
         Integer trackingNumber = database.size()+1;
