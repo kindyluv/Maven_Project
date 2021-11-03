@@ -27,27 +27,98 @@ class PackageRepositoryImplTest {
         aPackage.setReceiverName("Dami");
         aPackage.setReceiverPhone("111112222");
         aPackage.setDeliveryAddress("312, ");
-        aPackage.setTrackingNumber(1234);
+//        aPackage.setId(1234);
         aPackage.setNetWeight(32.4);
         aPackage.setSenderPhone(aPackage.getReceiverPhone());
 
         Package savedPackage = packageRepository.save(aPackage);
-        assertEquals(1, savedPackage.getTrackingNumber());
+        assertEquals(1, savedPackage.getId());
     }
 
-    @Test
-    void findAll() {
-    }
+//    @Test
+//    void updatePackageTest() {
+//        Package aPackage = new Package();
+//        aPackage.setName("Sleeping Mat");
+//        aPackage.setSenderName("Jerry");
+//        aPackage.setReceiverName("Dami");
+//        aPackage.setReceiverPhone("111112222");
+//        aPackage.setDeliveryAddress("312, ");
+//        aPackage.setNetWeight(32.4);
+//        aPackage.setSenderPhone(aPackage.getReceiverPhone());
+//
+//        Package savedPackage = packageRepository.save(aPackage);
+//        savedPackage.setName("Sniper");
+//        Package updatedPackage = packageRepository.save(savedPackage);
+//        assertEquals(1, updatedPackage.getId());
+//    }
 
-    @Test
-    void delete() {
-    }
+//    @Test
+//    void findAll() {
+//        Package aPackage = new Package();
+//        aPackage.setName("Sleeping Mat");
+//        aPackage.setSenderName("Jerry");
+//        aPackage.setReceiverName("Dami");
+//        aPackage.setReceiverPhone("111112222");
+//        aPackage.setDeliveryAddress("312, ");
+//        aPackage.setId(1234);
+//        aPackage.setNetWeight(32.4);
+//        aPackage.setSenderPhone(aPackage.getReceiverPhone());
+//
+//        Package savedPackage = packageRepository.save(aPackage);
+//        assertEquals(1, packageRepository.findAll().size());
+//    }
 
-    @Test
-    void deleteByTrackingNumber() {
-    }
+//    @Test
+//    void delete() {
+//        Package aPackage = new Package();
+//        aPackage.setName("Sleeping Mat");
+//        aPackage.setSenderName("Jerry");
+//        aPackage.setReceiverName("Dami");
+//        aPackage.setReceiverPhone("111112222");
+//        aPackage.setDeliveryAddress("312, ");
+//        aPackage.setId(1234);
+//        aPackage.setNetWeight(32.4);
+//        aPackage.setSenderPhone(aPackage.getReceiverPhone());
+//
+//        Package savedPackage = packageRepository.save(aPackage);
+//        assertEquals(1, packageRepository.findAll().size());
+//
+//        packageRepository.delete(savedPackage);
+//        assertEquals(0, packageRepository.findAll().size());
+//    }
 
-    @Test
-    void findPackageTrackingNumbered() {
-    }
+//    @Test
+//    void deleteByTrackingNumber() {
+//        Package aPackage = new Package();
+//        aPackage.setName("Sleeping Mat");
+//        aPackage.setSenderName("Jerry");
+//        aPackage.setReceiverName("Dami");
+//        aPackage.setReceiverPhone("111112222");
+//        aPackage.setDeliveryAddress("312, ");
+////        aPackage.setId(1234);
+//        aPackage.setNetWeight(32.4);
+//        aPackage.setSenderPhone(aPackage.getReceiverPhone());
+//
+//        Package savedPackage = packageRepository.save(aPackage);
+//        assertEquals(1, packageRepository.findAll().size());
+//
+//        packageRepository.delete(1);
+//        assertEquals(0, packageRepository.findAll().size());
+//    }
+
+//    @Test
+//    void findPackageTrackingNumbered() {
+//        Package aPackage = new Package();
+//        aPackage.setName("Sleeping Mat");
+//        aPackage.setSenderName("Jerry");
+//        aPackage.setReceiverName("Dami");
+//        aPackage.setReceiverPhone("111112222");
+//        aPackage.setDeliveryAddress("312, ");
+////        aPackage.setId(1234);
+//        aPackage.setNetWeight(32.4);
+//        aPackage.setSenderPhone(aPackage.getReceiverPhone());
+//
+//        Package savedPackage = packageRepository.save(aPackage);
+//        assertEquals(savedPackage, packageRepository.findPackageTrackingNumbered(1));
+//    }
 }
