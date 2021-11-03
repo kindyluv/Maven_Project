@@ -2,13 +2,19 @@ package africa.semicolon.cheetah.data.repositories;
 
 import africa.semicolon.cheetah.data.models.Package;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 public class PackageRepositoryImpl implements PackageRepository {
+    Map<Integer, Package> database = new HashMap<>();
     @Override
     public Package save(Package aPackage) {
-        return null;
+        Integer trackingNumber = database.size()+1;
+        aPackage.setTrackingNumber(trackingNumber);
+        database.put(trackingNumber, aPackage);
+        return database.get(trackingNumber);
     }
 
     @Override
