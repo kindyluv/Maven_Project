@@ -24,4 +24,9 @@ public class PackageServiceImpl implements PackageService {
         //return converted response
         return response;
     }
+
+    @Override
+    public Package findPackageWithMy(Integer id) {
+        return packageRepository.findPackageTrackingNumbered(id);
+    }
 }
