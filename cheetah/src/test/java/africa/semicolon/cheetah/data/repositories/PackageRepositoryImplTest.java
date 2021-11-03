@@ -106,19 +106,19 @@ class PackageRepositoryImplTest {
         assertEquals(0, packageRepository.findAll().size());
     }
 
-//    @Test
-//    void findPackageTrackingNumbered() {
-//        Package aPackage = new Package();
-//        aPackage.setName("Sleeping Mat");
-//        aPackage.setSenderName("Jerry");
-//        aPackage.setReceiverName("Dami");
-//        aPackage.setReceiverPhone("111112222");
-//        aPackage.setDeliveryAddress("312, ");
-////        aPackage.setId(1234);
-//        aPackage.setNetWeight(32.4);
-//        aPackage.setSenderPhone(aPackage.getReceiverPhone());
-//
-//        Package savedPackage = packageRepository.save(aPackage);
-//        assertEquals(savedPackage, packageRepository.findPackageTrackingNumbered(1));
-//    }
+    @Test
+    void findPackageTrackingNumbered() {
+        Package aPackage = new Package();
+        aPackage.setName("Sleeping Mat");
+        aPackage.setSenderName("Jerry");
+        aPackage.setReceiverName("Dami");
+        aPackage.setReceiverPhone("111112222");
+        aPackage.setDeliveryAddress("312, ");
+//        aPackage.setId(1234);
+        aPackage.setNetWeight(32.4);
+        aPackage.setSenderPhone(aPackage.getReceiverPhone());
+
+        Package savedPackage = packageRepository.save(aPackage);
+        assertEquals(savedPackage, packageRepository.findPackageTrackingNumbered(1));
+    }
 }
