@@ -11,4 +11,6 @@ public class AddPackageRequest {
     private double weight;
     private String packageDescription;
     private String receiverPhone;
+
+
 }
