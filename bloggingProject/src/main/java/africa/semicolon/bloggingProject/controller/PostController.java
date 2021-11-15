@@ -1,8 +1,8 @@
 package africa.semicolon.bloggingProject.controller;
 
 import africa.semicolon.bloggingProject.data.model.Post;
-import africa.semicolon.bloggingProject.dtos.AddPostRequest;
-import africa.semicolon.bloggingProject.dtos.AddPostResponse;
+import africa.semicolon.bloggingProject.dtos.request.AddPostRequest;
+import africa.semicolon.bloggingProject.dtos.response.AddPostResponse;
 import africa.semicolon.bloggingProject.service.PostService;
 import africa.semicolon.bloggingProject.service.PostServiceImpl;
 import org.springframework.web.bind.annotation.*;
