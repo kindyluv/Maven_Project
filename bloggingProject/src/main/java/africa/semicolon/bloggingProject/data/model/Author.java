@@ -12,6 +12,4 @@ public class Author {
     private String userName;
     private Integer authorId;
     private String emailAddress;
-    private List<Post> post = new ArrayList<>();
-    private List<Comment> comment = new ArrayList<>();
 }
