@@ -1,8 +1,8 @@
-package africa.semicolon.bloggingProject.utils;
+package africa.semicolon.bloggingProject.utils.postModelMapper;
 
 import africa.semicolon.bloggingProject.data.model.Post;
-import africa.semicolon.bloggingProject.dtos.AddPostRequest;
-import africa.semicolon.bloggingProject.dtos.AddPostResponse;
+import africa.semicolon.bloggingProject.dtos.request.AddPostRequest;
+import africa.semicolon.bloggingProject.dtos.response.AddPostResponse;
 
 public class ModelMapper {
 
