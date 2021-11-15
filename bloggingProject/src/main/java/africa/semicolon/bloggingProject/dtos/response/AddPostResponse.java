@@ -1,4 +1,4 @@
-package africa.semicolon.bloggingProject.dtos;
+package africa.semicolon.bloggingProject.dtos.response;
 
 import africa.semicolon.bloggingProject.data.model.Author;
 import africa.semicolon.bloggingProject.data.model.Post;
