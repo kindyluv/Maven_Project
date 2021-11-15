@@ -12,9 +12,7 @@ public interface AuthorRepository {
     Author findAuthor(Author author);
     Author findAuthorByPostHeadLine(String postHeadLine);
     List<Author> findAllAuthor();
-    void deleteAuthor(Author author);
-    void deleteAllAuthor(Author... author);
-    void deleteAuthorByUsername(String username);
+    void deleteAuthorId(Integer authorId);
+    void deleteAllAuthor();
 
-    int getCount();
 }
