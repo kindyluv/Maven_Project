@@ -1,10 +1,8 @@
 package africa.semicolon.bloggingProject.service;
 
 import africa.semicolon.bloggingProject.data.model.Post;
-import africa.semicolon.bloggingProject.dtos.AddPostRequest;
-import africa.semicolon.bloggingProject.dtos.AddPostResponse;
-
-import java.util.List;
+import africa.semicolon.bloggingProject.dtos.request.AddPostRequest;
+import africa.semicolon.bloggingProject.dtos.response.AddPostResponse;
 
 public interface PostService {
 
