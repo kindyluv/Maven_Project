@@ -3,11 +3,9 @@ package africa.semicolon.bloggingProject.service;
 import africa.semicolon.bloggingProject.data.model.Post;
 import africa.semicolon.bloggingProject.data.repository.PostRepository;
 import africa.semicolon.bloggingProject.data.repository.PostRepositoryImpl;
-import africa.semicolon.bloggingProject.dtos.AddPostRequest;
-import africa.semicolon.bloggingProject.dtos.AddPostResponse;
-import africa.semicolon.bloggingProject.utils.ModelMapper;
-
-import java.util.List;
+import africa.semicolon.bloggingProject.dtos.request.AddPostRequest;
+import africa.semicolon.bloggingProject.dtos.response.AddPostResponse;
+import africa.semicolon.bloggingProject.utils.postModelMapper.ModelMapper;
 
 public class PostServiceImpl implements PostService{
     PostRepository postRepository = new PostRepositoryImpl();
