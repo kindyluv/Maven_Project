@@ -17,6 +17,10 @@ public class CustomerController {
     public AddCustomerResponse createCustomer(@RequestBody AddCustomerRequest request){
         return customerService.createCustomer(request);
     }
+    @GetMapping("/")
+    public String home (){
+        return "<h1>Hello World</h1>";
+    }
 
     @GetMapping("/api/customer/{email}")
     public Optional<Customer> findCustomerByEmail(@PathVariable String email){
