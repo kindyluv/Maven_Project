@@ -1,4 +1,4 @@
-package africa.semicolon.bloggingProject.dtos;
+package africa.semicolon.bloggingProject.dtos.request;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
