@@ -1,6 +1,7 @@
 package africa.semicolon.BankingApplication.data.models;
 
 import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.List;
 
