@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8baae89b-1a43-4320-986f-59eed5fd5588" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BankingApplication/data/repositories/AccountRepositoryImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BankingApplication/data/repositories/BankRepositoryImpTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BankingApplication/data/repositories/CustomerRepositoryImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BankingApplication/services/BankServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/BankingApplication/data/models/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/BankingApplication/data/models/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/BankingApplication/data/models/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/BankingApplication/data/models/Bank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/BankingApplication/data/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/BankingApplication/data/models/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/BankingApplication/services/BankService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/BankingApplication/services/BankService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/BankingApplication/services/BankServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/BankingApplication/services/BankServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/BankingApplication/services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/BankingApplication/services/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/africa/semicolon/BankingApplication/data/repositories/AccountRepositoryImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/africa/semicolon/BankingApplication/data/repositories/BankRepositoryImpTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/africa/semicolon/BankingApplication/data/repositories/CustomerRepositoryImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/africa/semicolon/BankingApplication/services/BankServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beansAppProject/src/main/java/africa/semicolon/beansAppProject/MainClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beansAppProject/src/main/java/africa/semicolon/beansAppProject/controller/CustomerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beansAppProject/src/main/java/africa/semicolon/beansAppProject/data/model/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beansAppProject/src/main/java/africa/semicolon/beansAppProject/data/repository/CustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beansAppProject/src/main/java/africa/semicolon/beansAppProject/data/repository/CustomerRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beansAppProject/src/main/java/africa/semicolon/beansAppProject/dtos/AddCustomerRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beansAppProject/src/main/java/africa/semicolon/beansAppProject/dtos/AddCustomerResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beansAppProject/src/main/java/africa/semicolon/beansAppProject/exception/EmailNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beansAppProject/src/main/java/africa/semicolon/beansAppProject/service/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beansAppProject/src/main/java/africa/semicolon/beansAppProject/service/CustomerServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beansAppProject/src/main/java/africa/semicolon/beansAppProject/util/ModelMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beansAppProject/src/test/java/africa/semicolon/beansAppProject/data/repository/CustomerRepositoryImplTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="210Pqxi98fIP7BorCTq4TjGWvWZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java" />
+    <property name="settings.editor.selected.configurable" value="MTHome" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="CustomerRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BankingApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="BankingApplication.data.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="BankingApplication.data.repositories" />
+      <option name="MAIN_CLASS_NAME" value="BankingApplication.data.repositories.CustomerRepositoryImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CustomerRepositoryImplTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8baae89b-1a43-4320-986f-59eed5fd5588" name="Changes" comment="" />
+      <created>1637075229965</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637075229965</updated>
+      <workItem from="1637075232894" duration="627000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
