@@ -1,6 +1,8 @@
 package africa.semicolon.BankingApplication.services;
 
-import africa.semicolon.BankingApplication.data.models.*;
+import africa.semicolon.BankingApplication.data.models.Account;
+import africa.semicolon.BankingApplication.data.models.Bank;
+import africa.semicolon.BankingApplication.data.models.Customer;
 import africa.semicolon.BankingApplication.data.repositories.BankRepository;
 import africa.semicolon.BankingApplication.data.repositories.BankRepositoryImp;
 import africa.semicolon.BankingApplication.dtos.requests.CreateAccountRequests;
