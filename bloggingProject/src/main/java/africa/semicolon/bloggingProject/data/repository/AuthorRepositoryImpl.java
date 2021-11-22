@@ -1,6 +1,7 @@
 package africa.semicolon.bloggingProject.data.repository;
 
 import africa.semicolon.bloggingProject.data.model.Author;
+import africa.semicolon.bloggingProject.exception.TrackingIdNotFoundException;
 
 import java.util.*;
 
@@ -23,10 +24,8 @@ public class AuthorRepositoryImpl implements AuthorRepository{
 
     @Override
     public Author findAuthorById(Integer authorId) {
-        if(database.containsKey(authorId)){
-            return database.get(authorId);
-        }
-        return null;
+        if(!(database.containsKey(authorId))) throw new TrackingIdNotFoundException("invalid Author information");
+        return database.get(authorId);
     }
 
     @Override
