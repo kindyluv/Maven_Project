@@ -1,5 +1,6 @@
 package africa.semicolon.bloggingProject.service;
 
+import africa.semicolon.bloggingProject.exception.PostTrackingIdNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,7 +15,7 @@ class PostServiceImplTest {
     }
 
     @Test
-    void findPostByUniqueId() {
+    void findPostByUniqueId() throws PostTrackingIdNotFoundException {
 
         assertEquals(1, postService.findPostByUniqueId(1));
     }
