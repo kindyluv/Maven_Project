@@ -28,6 +28,7 @@ class CustomerRepositoryImplTest {
     @Test
     void saveCustomer() {
         Customer customer = new Customer();
+        Customer customer__ = new Customer();
         customer.setFirstName("John");
         customer.setLastName("Queen");
         customer.setEmail(customer.getFirstName()+customer.getLastName()+"@gmail.com");
@@ -35,6 +36,23 @@ class CustomerRepositoryImplTest {
 
        customerRepository.saveCustomer(customer);
         assertEquals(1, customerRepository.findAllCustomers().size());
+        customer__.setFirstName("John");
+        customer__.setLastName("Queen");
+//        customer.setEmail(customer.getFirstName()+customer.getLastName()+"@gmail.com");
+        customer__.setPassword("12345645");
+        customer__.setEmail("John_Queen@gmail.com");
+        customerRepository.saveCustomer(customer__);
+
+        assertEquals("John_Queen@gmail.com", customerRepository.findAllCustomers().get(1).getEmail());
+    }
+
+    @Test
+    void customerPasswordLength() {
+        Customer customer = response();
+
+        Customer password = customerRepository.saveCustomer(customer);
+
+        assertEquals(password, customerRepository.customerPasswordLength(response().getPassword()));
     }
 
     @Test
@@ -42,7 +60,7 @@ class CustomerRepositoryImplTest {
         Customer customer = response();
 
         customerRepository.saveCustomer(customer);
-       customerRepository.findCustomerByEmail(customer.getEmail());
+       assertEquals(1, customerRepository.findAllCustomers().size());
         assertEquals("JohnQueen@gmail.com", customerRepository.findAllCustomers().get(0).getEmail());
     }
 
