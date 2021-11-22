@@ -5,14 +5,18 @@ import africa.semicolon.bloggingProject.data.repository.PostRepository;
 import africa.semicolon.bloggingProject.data.repository.PostRepositoryImpl;
 import africa.semicolon.bloggingProject.dtos.request.AddPostRequest;
 import africa.semicolon.bloggingProject.dtos.response.AddPostResponse;
+import africa.semicolon.bloggingProject.exception.PostTrackingIdNotFoundException;
 import africa.semicolon.bloggingProject.utils.postModelMapper.ModelMapper;
+
+import java.util.Optional;
 
 public class PostServiceImpl implements PostService{
     PostRepository postRepository = new PostRepositoryImpl();
 
     @Override
-    public Post findPostByUniqueId(Integer id) {
-        return postRepository.findPostByUniqueId(id);
+    public Post findPostByUniqueId(Integer id) throws PostTrackingIdNotFoundException {
+        assert(postRepository.findPostByUniqueId(id).isPresent());
+        return postRepository.findPostByUniqueId(id).get();
     }
 
 
@@ -28,8 +32,9 @@ public class PostServiceImpl implements PostService{
     }
 
     @Override
-    public Post updatePost(Integer postId, AddPostRequest addPostRequest) {
-        Post post = postRepository.findPostByUniqueId(postId);
+    public Post updatePost(Integer postId, AddPostRequest addPostRequest) throws PostTrackingIdNotFoundException {
+        assert(postRepository.findPostByUniqueId(postId).isPresent());
+        Post post = postRepository.findPostByUniqueId(postId).get();
         if(!post.getPostTitle().equals(addPostRequest.getPostTitle())) post.setPostTitle(addPostRequest.getPostTitle());
         if(!post.getPostBody().equals(addPostRequest.getPostContent())) post.setPostBody(addPostRequest.getPostContent());
         if(!post.getAuthorInfo().equals(addPostRequest.getAuthorId())) post.setAuthorInfo(addPostRequest.getAuthorId());
@@ -38,8 +43,9 @@ public class PostServiceImpl implements PostService{
     }
 
     @Override
-    public void deletePost(Integer postId) {
-        postRepository.deletePost(postRepository.findPostByUniqueId(postId).getPostUniqueId());
+    public void deletePost(Integer postId) throws PostTrackingIdNotFoundException {
+        assert(postRepository.findPostByUniqueId(postId).isPresent());
+        postRepository.deletePost(postRepository.findPostByUniqueId(postId).get().getPostUniqueId());
 
     }
 }
