@@ -5,6 +5,7 @@ import africa.semicolon.beansAppProject.data.repository.CustomerRepository;
 import africa.semicolon.beansAppProject.data.repository.CustomerRepositoryImpl;
 import africa.semicolon.beansAppProject.dtos.AddCustomerRequest;
 import africa.semicolon.beansAppProject.dtos.AddCustomerResponse;
+import africa.semicolon.beansAppProject.exception.IncompleteFilledException;
 import africa.semicolon.beansAppProject.util.ModelMapper;
 
 import java.util.Optional;
@@ -19,7 +20,6 @@ public class CustomerServiceImpl implements CustomerService{
         Customer savedCustomer = customerRepository.saveCustomer(customer);
 
         AddCustomerResponse response = ModelMapper.map(savedCustomer);
-
         return response;
     }
 
