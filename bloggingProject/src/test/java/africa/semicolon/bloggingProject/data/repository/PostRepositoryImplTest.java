@@ -3,8 +3,12 @@ package africa.semicolon.bloggingProject.data.repository;
 import africa.semicolon.bloggingProject.data.model.Author;
 import africa.semicolon.bloggingProject.data.model.Comment;
 import africa.semicolon.bloggingProject.data.model.Post;
+import africa.semicolon.bloggingProject.exception.EmptyPostIdException;
+import africa.semicolon.bloggingProject.exception.PostTrackingIdNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -17,7 +21,7 @@ class PostRepositoryImplTest {
         Author author = authorInfo();
     }
 
-    private Author authorInfo(){
+    public Author authorInfo(){
         Author author = new Author();
         author.setFirstName("Lois");
         author.setLastName("Loisy");
@@ -37,7 +41,7 @@ class PostRepositoryImplTest {
 //        return postRepository.saveComment(comment);
 //    }
 
-    private Post response(){
+    public Post response(){
         Post post = new Post();
         post.setAuthorInfo(authorInfo());
         post.setPostUniqueId(1985);
@@ -55,19 +59,22 @@ class PostRepositoryImplTest {
         post.setPostBody("good morning world ohhhhhhh i love blogging");
         Post post_ = postRepository.savePost(post);
         assertEquals(1985, post_.getPostUniqueId());
+        assertEquals(1, postRepository.findAllPost().size());
     }
 
     @Test
-    void searchForPostByUniqueId() {
+    void searchForPostByUniqueId() throws PostTrackingIdNotFoundException {
         Post post = response();
 
-        Post post_ = postRepository.savePost(post);
-        assertEquals(1, postRepository.getCount());
+        Post savedPost = postRepository.savePost(post);
+        Optional<Post> findPost = postRepository.findPostByUniqueId(savedPost.getPostUniqueId());
+        assertEquals(1985, postRepository.findAllPost().get(0).getPostUniqueId());
+        //TODO RTFM, JAVA DOCS
 
     }
 
     @Test
-    void savePost() {
+    void savePost(){
         Post post = new Post();
         post.setAuthorInfo(authorInfo());
         post.setPostTitle("First Post");
@@ -79,15 +86,20 @@ class PostRepositoryImplTest {
     @Test
     void updatePost() {
         Post post = response();
+        System.out.println(post);
         post.setPostBody("good morning world i love blogging");
-        Post post__ = postRepository.updatePost(response().getPostUniqueId(), post);
-        Post savedPost = postRepository.savePost(post__);
-        System.out.println(savedPost);
-        post.setPostTitle("Presh stole the meat");
-        postRepository.updatePost(response().getPostUniqueId(), post);
-        Post save = postRepository.savePost(post);
-        System.out.println(save);
-        assertEquals(1, postRepository.getCount());
+        Post savedPost = postRepository.savePost(post);
+
+        Post post__ = postRepository.updatePost(response().getPostUniqueId(), savedPost);
+        Post savedPost__ = postRepository.savePost(post__);
+
+       post.setPostTitle("Presh stole the meat");
+        Post savedPost_ = postRepository.savePost(post);
+
+        Post update = postRepository.updatePost(response().getPostUniqueId(), savedPost_);
+        Post save = postRepository.savePost(update);
+
+        assertEquals(1, postRepository.findAllPost().size());
     }
 
     @Test
