@@ -2,68 +2,52 @@ package africa.semicolon.bloggingProject.data.repository;
 
 import africa.semicolon.bloggingProject.data.model.Author;
 import africa.semicolon.bloggingProject.data.model.Post;
+import africa.semicolon.bloggingProject.exception.PostTrackingIdNotFoundException;
 
 import java.util.*;
 
 public class PostRepositoryImpl implements PostRepository {
     Map<Integer, Post> database = new HashMap<Integer, Post>();
     Map<Integer, Author> authorDatabase = new HashMap<Integer, Author>();
-//    Map<Integer, Comment> commentDatabase = new HashMap<Integer, Comment>();
-    private int count = 0;
 
-//    private DataStorage database_ = new DataStorage();
-
-
-    @Override
-    public Post findPostByUniqueId(Integer postId){
-        Post post = new Post();
-        List<Post> uniqueId = new ArrayList<>();
-        Set<Integer> keys = database.keySet();
-        for(Integer key : keys){
-            if(key.equals(postId)){
-              Post post_ = uniqueId.get(key);
-                return post_;
-            }
-        }
-        return null;
-    }
-
-    @Override
-    public Post makePost(Integer postId, Post post) {
-        Post findId = findPostByUniqueId(postId);
-        if(!findId.equals(postId)){
-            return post;
-        }
-        return null;
-    }
-
-    @Override
-    public int getCount() {
-        return count;
-    }
 
     @Override
     public Post savePost(Post post) {
-        Integer postId = null;
-        if(post.getPostUniqueId() == null){
+        Integer postId;
+        if (post.getPostUniqueId() == null){
             postId = database.size()+1;
             post.setPostUniqueId(postId);
-        }else{
+        }
         postId = post.getPostUniqueId();
         database.put(postId, post);
-        count++;}
+
         return database.get(postId);
     }
 
     @Override
     public Post updatePost(Integer postId, Post newPost) {
-        List<Post> postList = new ArrayList<>();
         Set<Integer> keys = database.keySet();
         for (Integer key : keys) {
-            if(postId.equals(key)) {
-                return savePost(newPost);
-            }
+            if(postId.equals(key)) return savePost(newPost);
+        }
+        return null;
+    }
 
+    @Override
+    public Optional<Post> findPostByUniqueId(Integer postId) throws PostTrackingIdNotFoundException {
+        if(!(database.containsKey(postId))) throw new PostTrackingIdNotFoundException("Please Enter a valid tracking id");
+        Set<Integer> keys = database.keySet();
+        for(Integer key : keys){
+            if(key.equals(postId)) return Optional.of(database.get(postId));
+        }
+        return Optional.empty();
+    }
+
+    @Override
+    public Post makePost(Integer postId, Post post) throws PostTrackingIdNotFoundException {
+        Optional<Post> findId = findPostByUniqueId(postId);
+        if(!(findId.equals(postId))){
+            return post;
         }
         return null;
     }
